@@ -1,0 +1,180 @@
+/**
+ * Theme Name:        CMS II Project
+ * Description:       This is a coustom theme for Chicago Tourism website.
+ * Version:           1.0.0
+ * Author:            Ana Amaya | Jing-An Chen | Jeffrey Arbutante | Joelife Pacapac
+ * License:           GNU General Public License v2.0 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+
+ /* color platte */
+  :root{
+    /* color */
+    --reddish-pink: #d15b61;
+    --soft-peach: #ffca7c;
+    --light-sky-blue: #4ab2e1;
+    --vibrant-orange: #faa143;
+    --deep-teal: #0b343b;
+
+    /* space */
+    --space-1: 1rem;
+    --space-2: 2rem;
+    --space-4: 4rem;
+    --space-8: 8rem;
+ }
+
+
+ /* other styles */
+h1{
+    font-size: 7rem;
+    font-weight: 900;
+    color: var(--reddish-pink);
+}
+
+h2{
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--soft-peach);
+}
+
+h3{
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--vibrant-orange);
+}
+
+h4{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--soft-peach);
+}
+
+h5{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--soft-peach);
+}
+
+h6{
+    font-size: 0.5rem;
+    font-weight: 700;
+    color: var(--soft-peach);
+}
+/* components */
+
+.c-contact{
+    background-color: var(--light-sky-blue);
+    border-top: solid var(--reddish-pink) var(--space-1);
+    color: white;
+    a{
+        all: unset;
+        cursor: pointer;
+    }
+}
+
+.c-chicago_custome{
+    width: 100%;
+}
+
+.c-chicago_custome ul{
+    list-style-type:none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: var(--space-1);
+}
+
+.c-chicago_custome .page_item a{
+    all: unset;
+    color: var(--vibrant-orange);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: var(--space-1);
+    transition: 0.2s;
+}
+
+.c-chicago_custome .page_item a:hover{
+font-size: 1.2rem;
+}
+
+
+/* objects */
+
+.o-img{
+    width: 100%;
+    filter: blur(2px);
+    transform-origin: 50% 50%;
+    transition: 0.2s;
+    transform: scale(0.9);
+    cursor: pointer;
+    border-radius: var(--space-1);
+}
+
+.o-img:hover{
+    filter: none;
+    transform: scale(1);
+    border-radius: 0;
+}
+
+.o-img__title{
+    width: 100%;
+    font-size: var(--fm);
+    text-align: center;
+}
+
+.o-heroBanner{
+    width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.o-heroBanner__title{
+    color: white;
+    text-shadow: var(--light-sky-blue) var(--space-1) var(--space-1);
+    font-size: var(--space-8);
+    font-weight: 900;
+}
+
+.o-a__unset{
+    all: unset;
+    cursor: pointer;
+}
+
+.o-postCard{
+    background-color: var(--light-sky-blue);
+    border-radius: var(--space-1);
+}
+
+.o-postCard__title{
+    color: white;
+}
+
+.o-postCard__a{
+    all: unset;
+    color: white;
+    cursor: pointer;
+}
+
+.my-little-pic{
+    filter: blur(2px);
+    border-radius: 50px;
+}
+
+
+/* media query */
+@media (max-width: 768px) {
+    h2{
+        font-size: 2rem;
+    }
+    .o-heroBanner__title{
+        font-size: var(--space-2);
+    }
+    .c-chicago_custome ul{
+        flex-direction: column;
+        padding: 0;
+    }
+}

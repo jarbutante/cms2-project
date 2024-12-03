@@ -1,0 +1,285 @@
+// Theme Metadata
+/*!
+ * Theme Name: CMS II Project
+ * Description: Custom theme for Chicago Tourism website.
+ * Version: 1.0.0
+ * Author: Ana Amaya | Jing-An Chen | Jeffrey Arbutante | Joelife Pacapac
+ * License: GNU General Public License v2.0 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+//  google font
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+.funnel{
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+// Variables
+:root {
+    // Colors
+    --color-reddish-pink: #d15b61;
+    --color-soft-peach: #ffca7c;
+    --color-light-sky-blue: #4ab2e1;
+    --color-vibrant-orange: #faa143;
+    --color-deep-teal: #0b343b;
+
+    // Spaces
+    --space-1: 1rem;
+    --space-2: 2rem;
+    --space-4: 4rem;
+    --space-8: 8rem;
+}
+
+// Base Styles
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 7rem;
+    color: var(--color-reddish-pink);
+}
+
+h2 {
+    font-size: 5rem;
+    color: var(--color-soft-peach);
+}
+
+h3 {
+    font-size: 3rem;
+    color: var(--color-vibrant-orange);
+}
+
+h4,
+h5,
+h6 {
+    font-size: 2rem;
+    color: var(--color-soft-peach);
+}
+
+p{
+    color: var(--color-deep-teal);
+    font-size: var(--space-1);
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+#s, #searchsubmit{
+    font-size: var(--space-1);
+}
+
+// Components
+.c-contact {
+    background-color: var(--color-light-sky-blue);
+    color: white;
+
+    a {
+        all: unset;
+        cursor: pointer;
+    }
+}
+
+.c-chicago-custom {
+    width: 100%;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: var(--space-1);
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    .page_item {
+        width: auto; // Ensure consistent width unless overridden in responsive design
+
+        a {
+            all: unset;
+            color: var(--color-vibrant-orange);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: var(--space-1);
+            transition: font-size 0.2s ease-in-out;
+
+            &:hover {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            width: 30%;
+        }
+    }
+}
+
+.c-card{
+    border: solid 2px var(--color-vibrant-orange);
+    border-radius: var(--space-2);
+    &__btn{
+        all: unset;
+        cursor: pointer;
+        background-color: #d15b61;
+        color: var(--color-soft-peach);
+        padding: var(--space-1);
+        border-radius: var(--space-1);
+    }
+}
+
+.c-footer{
+    nav ul li a{
+        all: unset;
+        cursor: pointer;
+        color: white;
+        letter-spacing: 0.2rem;
+        font-weight: 600;
+    }
+    &__first{
+        background-color: var(--color-deep-teal);
+    }
+    &__second{
+        background-color: var(--color-reddish-pink);
+    }
+    &__third{
+        background-color: var(--color-vibrant-orange);
+    }
+}
+
+// Objects
+.o-img {
+    width: 100%;
+    filter: blur(2px);
+    transform-origin: 50% 50%;
+    transition: 0.2s;
+    transform: scale(0.9);
+    cursor: pointer;
+    border-radius: var(--space-1);
+
+    &:hover {
+        filter: none;
+        transform: scale(1);
+        border-radius: 0;
+    }
+}
+
+.o-img__title {
+    width: 100%;
+    font-size: var(--space-2);
+    text-align: center;
+}
+
+.o-heroBanner {
+    width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__title {
+        color: white;
+        text-shadow: var(--color-light-sky-blue) var(--space-1) var(--space-1);
+        font-size: var(--space-8);
+        font-family: "Funnel Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+    }
+}
+
+.o-postCard {
+    background-color: var(--color-light-sky-blue);
+    border-radius: var(--space-1);
+
+    &__title,
+    &__a {
+        color: white;
+    }
+
+    &__a {
+        all: unset;
+        cursor: pointer;
+    }
+}
+
+.my-little-pic {
+    filter: blur(2px);
+    border-radius: 50px;
+}
+
+.header-widget-area {
+    background-color: #f9f9f9; /* Adjust as needed */
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.o-404bg{
+    width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+// Media Queries
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .o-heroBanner__title {
+        font-size: var(--space-2);
+    }
+
+    .c-chicago-custom__list {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+
+// 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 200px;
+    border-color: var(--color-vibrant-orange);
+    padding: 2rem;
+    border-radius: var(--space-1);
+  }
+  
+  .wpcf7-submit {
+    font-size: var(--space-1);
+    border-style: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 200px;
+    padding: var(--space-1);
+    border-radius: var(--space-1);
+    background-color: var(--color-reddish-pink);
+    color: var(--color-soft-peach);
+    
+  }
+
